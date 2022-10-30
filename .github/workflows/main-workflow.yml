@@ -24,8 +24,7 @@ jobs:
         java-version: 1.8
     - name: Build and Generate coverage
       
-      run:  cd bms-app
-      mvn test jacoco:report
+      run:  mvn -f ./bms-app clean install 
     - name: Upload coverage
       uses: actions/upload-artifact@v2
       with:
