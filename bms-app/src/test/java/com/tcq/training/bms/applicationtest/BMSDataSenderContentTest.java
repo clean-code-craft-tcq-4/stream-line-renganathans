@@ -36,8 +36,8 @@ public class BMSDataSenderContentTest {
 	public void testSenderData() throws JsonProcessingException {
 		DataUtil dataUtil = new DataUtil();
 		String dataToSend = dataUtil.parseAsJson(dataContainer);
-		String expectedOutput = "[ {\r\n" + "  \"soc\" : 50.0,\r\n" + "  \"temperature\" : 35.0\r\n" + "} ]";
-		assertEquals(expectedOutput, dataToSend);
+		String expectedOutput = "[ {\r\n" + "  \"soc\" : 50.0,\r\n" + "  \"temperature\" : 35.0 \r\n" + "} ]";
+		assertEquals(expectedOutput.replaceAll(" ", "").replaceAll("\r\n", "").trim(), dataToSend.replaceAll(" ", "").replaceAll("\r\n", "").trim());
 	}
 	
 }
