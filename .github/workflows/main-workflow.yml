@@ -31,3 +31,6 @@ jobs:
         name: coverage
         path: ./target/site/jacoco
         retention-days: 21
+        
+    - name: Run BMS Data Sender
+      run:  mvn -f ./bms-app compile exec:java -Dexec.mainClass="com.tcq.training.bms.application"
