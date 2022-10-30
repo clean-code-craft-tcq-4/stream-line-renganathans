@@ -37,7 +37,7 @@ public class BMSDataSenderContentTest {
 		DataUtil dataUtil = new DataUtil();
 		String dataToSend = dataUtil.parseAsJson(dataContainer);
 		String expectedOutput = "[{[" + System.lineSeparator() + "\"soc\":50.0," + System.lineSeparator() + "\"temperature\":35.0"
-				+ System.lineSeparator() + "]" + System.lineSeparator() + "}]";
+				 + " ]" + System.lineSeparator() + "}]";
 		assertEquals(expectedOutput.replaceAll(" ", "").trim(), dataToSend.replaceAll(" ", "").trim());
 	}
 	
